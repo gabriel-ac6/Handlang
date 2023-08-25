@@ -43,4 +43,4 @@ Comandos:
 
 O resto do que foi desenvolvido está dentro do arquivo .zip em que foi feito o upload -----> dentro da main.dart
 
-Caso haja dúvidas vejam esse vídeo: https://www.youtube.com/watch?v=wa6avC11c7U>
+Caso haja dúvidas vejam esses vídeos: https://www.youtube.com/watch?v=wa6avC11c7U e https://firebase.google.com/docs/flutter/setup?hl=pt-br&platform=ios
