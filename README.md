@@ -37,9 +37,10 @@ Comandos:
 10) Execute o código flutter pub add firebase_core
 11) Agora execute o comando flutterfire configure
 12) Aceite utilizar o projeto que você criou no console do firebase
-13) digite Y/y para aceitar a última opção e pronto
-14) Em seguida vá até pubsec.yaml e adicione a seguinte linha de comando:
-    cloud_firestore: ^4.9.0  # Use a versão mais recente do pacote
+13) Aperte enter para aceitar a última opção e pronto
+14) Em seguida use o comando flutter pub add cloud_firestore
+15) Em seguida vá até o pubspec.yaml e na opção lá encima de um pub get (se você estiver no android studio), caso não esteja vai ter que usar cli para fazer isso
+16) O projeto vai ter uns problemas de permissão mas caso você esteja com preguiça igual eu estive, abra o terminar conecte no seu celular ou emulador, de um sudo su para logar como adm e depois execute o comando flutter run
 
 O resto do que foi desenvolvido está dentro do arquivo .zip em que foi feito o upload -----> dentro da main.dart
 
