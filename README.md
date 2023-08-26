@@ -47,3 +47,104 @@ Comandos:
 O resto do que foi desenvolvido está dentro do arquivo .zip em que foi feito o upload -----> dentro da main.dart
 
 Caso haja dúvidas vejam esses vídeos: https://www.youtube.com/watch?v=wa6avC11c7U e https://firebase.google.com/docs/flutter/setup?hl=pt-br&platform=ios
+
+----
+#Segunda versão do app Handup:
+----
+
+##Instalação de dependencias para o admob, na qual se implicam:
+
+  . google_mobile_ads: ^3.0.0
+  . google_fonts: ^5.1.0
+
+Comandos:
+
+1) flutter doctor
+2) flutter pub add google_mobile_ads
+3) flutter pub add google_fonts
+4) Criar um objeto no admob relacionado ao projeto handsup
+5) pegar a chabe ID desse objeto criado
+6) Adicionar no arquivo android manifest:
+   ```
+   <manifest>
+    ...
+    <application>
+       ...
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713"/>
+    </application>
+    </manifest>
+  8) Adicionar no arquivo ios/Runner/Info.plist:
+     
+    ```
+    ...
+    <key>GADApplicationIdentifier</key>
+    <string>ca-app-pub-3940256099942544~1458002511</string>
+    ...
+    
+  10) criar um arquivo (I"lib/ad_helper.dart") como o seguinte código:
+      ```
+      import 'dart:io';
+
+      class AdHelper {
+
+      static String get bannerAdUnitId {
+        if (Platform.isAndroid) {
+          return 'ca-app-pub-3940256099942544/6300978111';
+        } else if (Platform.isIOS) {
+          return 'ca-app-pub-3940256099942544/2934735716';
+        } else {
+          throw new UnsupportedError('Unsupported platform');
+        }
+      }
+
+      static String get interstitialAdUnitId {
+        if (Platform.isAndroid) {
+          return "ca-app-pub-3940256099942544/1033173712";
+        } else if (Platform.isIOS) {
+          return "ca-app-pub-3940256099942544/4411468910";
+        } else {
+          throw new UnsupportedError("Unsupported platform");
+        }
+      }
+
+      static String get rewardedAdUnitId {
+        if (Platform.isAndroid) {
+          return "ca-app-pub-3940256099942544/5224354917";
+        } else if (Platform.isIOS) {
+          return "ca-app-pub-3940256099942544/1712485313";
+        } else {
+          throw new UnsupportedError("Unsupported platform");
+        }
+      }
+      }
+
+  12) Adicionar na main.dart:
+      ```
+      // TODO: Import google_mobile_ads.dart
+      import 'package:google_mobile_ads/google_mobile_ads.dart';
+
+      import 'package:flutter/material.dart';
+
+      ...
+  
+      class HomeRoute extends StatelessWidget {
+
+      ...
+
+      Future<InitializationStatus> _initGoogleMobileAds() {
+        // TODO: Initialize Google Mobile Ads SDK
+        return MobileAds.instance.initialize();
+       }
+      }
+    
+OBS: que isso é para o uso específico da criação de um apenas um banner, o processo para um anúncio com prêmio é feito de outros maneiras.
+
+-----
+      
+
+O resto do que foi desenvolvido está dentro do arquivo .zip em que foi feito o upload -----> dentro da main.dart
+
+Caso haja dúvidas vejam esses vídeos: https://www.youtube.com/watch?v=wa6avC11c7U e https://firebase.google.com/docs/flutter/setup?hl=pt-br&platform=ios
+
