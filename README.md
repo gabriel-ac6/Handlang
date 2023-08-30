@@ -17,7 +17,7 @@ Renan Gomes
 Data de Criação 25 de agosto de 2023 as 5:02
 
 ----
-#Primeira versão do app Handup:
+#Primeira versão do app HandLang:
 ----
 
 ##Instalação de dependencias básicas e configuração das mesmas, na qual se implicam:
