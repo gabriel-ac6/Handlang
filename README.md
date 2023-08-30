@@ -1,7 +1,7 @@
 #Para fazer download do projeto atual use esse link ----->>>>>> https://drive.google.com/drive/u/2/folders/1GKhf2hFRTuRlnxZsi4k82UnFiQpeTYn5
 
-# Handup
-PI-2023-HANDUP
+# HandLang
+PI-2023-HANDLANG
 
 Repositório para versionamento privado da aplicação Handup
 
