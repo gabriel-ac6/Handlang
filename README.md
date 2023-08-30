@@ -9,6 +9,7 @@ Colaboradores:
 
 Arthur
 Gabriel de Azevedo Camargo
+Gabriel Novato Nascimento
 Gustavo Delbon
 Hugo Vinicius Matos da Silva
 Leonardo Gomes
