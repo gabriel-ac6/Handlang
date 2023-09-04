@@ -42,6 +42,8 @@ Nessa sessão todos os keypoints serção coletados, não esqueça de informar t
 1. Verifique a criação dos diretórios onde os keypoints foram salvos
 2. Verifique se todas as keypoints foram salvas, após isso pode passar para a segunda etapa
 
+Observação: Como são 4 paths ou seja apenas de 3 testes no começo para fazer o teste, então serão 3 x 30, uma vez que serão coletados 30 vídeos de 30 frames para cada uma desses significados.
+
 ## Seção 6: Preprocess Data and Create Labels and Features
 
 Aqui não precisará ser supervisionado
@@ -52,11 +54,19 @@ Aqui não precisa ser supervisionado, porém verifique caso exista algum erro de
 
 ## Seção 8: Make predictions
 
+Aqui não precisa ser supervisionado
+
 ## Seção 9: Save Weights
+
+Aqui não precisa ser supervisionado
 
 ## Seção 10: Evaluation using Confusion Matrix and Accuracy
 
+Aqui não precisa ser supervisionado
+
 ## Seção 11: Test in Real Time
+
+Aqui é o teste real, o resultado da detecção irá aparecer na barrinha azul em cima da janela de imagem captada pela câmera.
 
 ## Observações:
 
