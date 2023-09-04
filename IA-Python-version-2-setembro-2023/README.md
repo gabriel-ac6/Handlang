@@ -1,58 +1,65 @@
-# Tutorial de Uso do MeuPrograma
+# Tutorial de Uso do código bruto IA Action Detection Refined version 3.0
 
-Bem-vindo ao tutorial de uso do MeuPrograma! Neste guia, você aprenderá como utilizar todas as funcionalidades deste programa incrível.
+Bem-vindo ao tutorial de uso do Action Detection version 3.0 - Com detecção refinada! Neste guia, você aprenderá como utilizar todas as funcionalidades, principalmente com olhos voltados a testar sua execução.
 
 ## Seção 1: Instalação
 
-Antes de começarmos, é necessário instalar o MeuPrograma no seu computador. Siga os passos abaixo:
+Antes de começarmos, é necessário instalar o python na sua máquina caso você não tenha, ou apenas instale uma IDE, segue alguns exemplos:
+ -PyCharm
+ -Jupyter  (usando o conda ou o próprio cmd utilizando o notebookenv)
+ -Talvez possa usar o google colab também
 
-1. Acesse [nosso site oficial](http://www.meuprograma.com) e clique em "Download".
-2. Siga as instruções de instalação específicas para o seu sistema operacional (Windows, macOS ou Linux).
-3. Após a instalação, inicie o MeuPrograma.
+ ## Seção 2: Baixe o código e instale as dependências 
+ 
 
-## Seção 2: Interface do Usuário
+1. Baixe o código em questão e veja se a sua versão do python aceita o mediapipe 0.10.0, caso não, utilize alguma versão que o log especificar e na sessão de download dependecies do código altere por exemplo para:
+   
+   ```
+   
+   !pip install mediapipe==0.10.1
+   
 
-Nesta seção, exploraremos a interface do MeuPrograma e suas principais funcionalidades:
+## Seção 2: Keypoints using MP Holistic
 
-![Interface do MeuPrograma](link_para_imagem.png)
+Nesta seção, exploraremos a interface da captação dos pontos chaves do próprio usuário, através deles é que o programa distingue o que é mão, braco, tronco, cabeça e doravante:
 
-- **Barra de Menu**: Na parte superior, você encontrará as opções de menu, como "Arquivo", "Editar" e "Ajuda".
-- **Barra de Ferramentas**: Abaixo da barra de menu, você terá acesso rápido às ferramentas mais utilizadas.
-- **Área de Trabalho**: No centro da janela, você realizará a maioria das ações. É aqui que você verá e editará seus projetos.
-- **Painel de Navegação**: À esquerda, você encontrará uma barra de navegação para acessar diferentes seções do programa.
+1. Certifique-se que todos os pontos chave do seu corpo que são cruciais para a diferenciação de cada movimento de cada parte do seu corpo, seus dedos, mãos, tronco, ombro, pescoço e etc.
+2. Após isso execute o teste de imagem 
+3. Após isso execute o último teste relacionado aos keypoints
 
-## Seção 3: Criando um Novo Projeto
+## Seção 3: Extract Keypoint Values
 
-Agora que você está familiarizado com a interface, vamos criar um novo projeto:
+Apartir daqui caso haja algo de errado será mais evidente, nessa sessão o código irá mostrar qual a quantidade total dos valores dos keypoints coletados no teste de .
 
-1. Clique em "Arquivo" no menu e selecione "Novo Projeto".
-2. Escolha um nome para o projeto e selecione a pasta de destino.
-3. Configure as opções do projeto, se necessário.
-4. Clique em "Criar" para iniciar seu novo projeto.
+## Seção 4: Setup Folders for Collection
 
-## Seção 4: Realizando Tarefas Básicas
+Aqui, todos os folders para as coleções dos dados, sendo em referência aos keypoints, ou aos dados de checkpoint do treinamento serão salvos, verifique se todos os mesmos foram criados, caso não informe o erro.
 
-Aqui, você aprenderá como realizar algumas tarefas básicas com o MeuPrograma:
+## Seção 5: Collect Keypoint Values for Training and Testing
 
-### Editando Texto
+Nessa sessão todos os keypoints serção coletados, não esqueça de informar todos as partes relevantes do seu corpo durante a coleta:
 
-1. Dê um duplo clique no texto que deseja editar na área de trabalho.
-2. Faça as alterações necessárias.
-3. Clique em "Salvar" para salvar suas mudanças.
+1. Verifique a criação dos diretórios onde os keypoints foram salvos
+2. Verifique se todas as keypoints foram salvas, após isso pode passar para a segunda etapa
 
-### Importando Arquivos
+## Seção 6: Preprocess Data and Create Labels and Features
 
-1. Vá para o menu "Arquivo" e selecione "Importar".
-2. Escolha o arquivo que deseja importar e clique em "Abrir".
+Aqui não precisará ser supervisionado
 
-### Exportando Projeto
+## Seção 7: Build and Train LSTM Neural Network
 
-1. Clique em "Arquivo" e escolha "Exportar".
-2. Escolha o formato de exportação desejado e selecione a pasta de destino.
-3. Clique em "Exportar" para concluir.
+Aqui não precisa ser supervisionado, porém verifique caso exista algum erro de versão do tensorflow, ou seja caso alguma função utilizada não exista no tensorflow instalado.
 
-Com essas informações, você já está pronto para começar a usar o MeuPrograma de forma eficaz. Explore mais recursos e funcionalidades conforme você se familiariza com o software.
+## Seção 8: Make predictions
 
-Lembre-se de consultar a documentação e a seção de ajuda para obter informações adicionais sobre recursos avançados e dicas úteis.
+## Seção 9: Save Weights
 
-Divirta-se utilizando o MeuPrograma!
+## Seção 10: Evaluation using Confusion Matrix and Accuracy
+
+## Seção 11: Test in Real Time
+
+## Observações:
+
+Caso seja necessário pode-se informar o erro nos canais privados, meu (Gabriel de Azevedo Camargo), Gustavo Delbon, Renan Gomes, não informe diretamente no grupo geral, pois pode haver ou dificuldade na explicação do erro / detalhamento, ou entendimento.
+
+Caso exista erro relacionado diretamente a falhas no código, informe a seção com problema para melhor compreensão
